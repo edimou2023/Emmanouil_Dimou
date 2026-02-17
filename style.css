@@ -33,15 +33,29 @@ p {
     font-size: 1.1em;
 
 }
-/* New styles */
+/* --- Assignment Additions --- */
 
-.header-1 { background-color: hsl(200, 70%, 50%); width: 80%; margin: 10px auto; padding: 10px; }
-.header-2 { background-color: hsl(150, 70%, 50%); width: 80%; margin: 10px auto; padding: 10px; }
-.header-3 { background-color: hsl(10, 70%, 50%); width: 80%; margin: 10px auto; padding: 10px; }
-
-.p-bg { 
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for readability */
+/* Headers with HSL colors and specific width/height */
+.assignment-header {
+    width: 70%;
+    margin: 20px auto;
     padding: 15px;
-    border-radius: 5px;
-    color: #000; 
+    height: auto;
+    border-radius: 8px;
+    color: white; /* Contrast for the background */
 }
+
+#h-blue { background-color: hsl(210, 80%, 45%); }   /* Blue HSL */
+#h-green { background-color: hsl(140, 70%, 40%); }  /* Green HSL */
+#h-orange { background-color: hsl(30, 90%, 50%); }  /* Orange HSL */
+
+/* Paragraphs with RGB colors */
+.assignment-p {
+    background-color: rgba(255, 255, 255, 0.9); /* White RGB with 90% opacity */
+    padding: 20px;
+    margin: 10px auto;
+    width: 80%;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
