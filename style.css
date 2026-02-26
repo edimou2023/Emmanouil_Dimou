@@ -1,107 +1,80 @@
-/* --- Global Page Styling --- */
+/* --- Global Aesthetic: Professional Dark Mode --- */
 body {
-    /* Using a professional deep slate blue for the page background */
-    background-color: #1a252f; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Soft white text for better readability on dark background */
-    color: #f8f9fa; 
+    background-color: #121920; /* Very dark navy-slate */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e0e0; /* Light grey text for eye comfort */
     margin: 0;
     padding: 20px;
 }
 
-/* --- Typography & Headers --- */
+/* --- Typography with Color Theory --- */
 h1 {
     font-family: 'Georgia', serif;
-    color: #3498db; /* Bright Azure Blue */
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 15px;
+    color: #3498db; /* Professional Azure */
+    border-bottom: 2px solid #f1c40f; /* Gold accent - Complementary to Blue */
+    padding-bottom: 10px;
 }
 
-/* Subheaders - Silver for a clean look */
-h2 {
+h2, h3 {
     font-family: 'Times New Roman', serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #bdc3c7; 
+    color: #5dade2; /* Lighter Azure */
+    letter-spacing: 1px;
 }
 
-h3 {
-    font-family: 'Times New Roman', serif;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #5dade2; /* Lighter Blue */
-}
-
-/* Global Paragraph styling */
 p {
-    line-height: 1.6;
-    font-size: 1.1em;
-    color: #ecf0f1;
+    line-height: 1.7;
+    color: #bdc3c7;
 }
 
-/* Horizontal Rule for clean section breaks */
 hr {
     border: 0;
     height: 1px;
-    background: #34495e;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
     margin: 40px 0;
 }
 
-/* --- Assignment: HSL Headers & RGB Paragraphs --- */
+/* --- Assignment Requirement: HSL Headers & RGB Paragraphs --- */
 
-/* Headers with HSL colors and consistent width */
 .assignment-header {
-    width: 80%;
-    margin: 30px auto 0 auto;
+    width: 85%;
+    margin: 20px auto 0 auto;
     padding: 15px;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    color: white; 
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+    border-radius: 8px 8px 0 0;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-/* Unique HSL Identities */
-#h-blue   { background-color: hsl(204, 70%, 45%); }  /* Deep Sky Blue */
-#h-green  { background-color: hsl(160, 60%, 35%); }  /* Emerald Teal */
-#h-orange { background-color: hsl(25, 75%, 45%); }   /* Burnt Orange */
+/* Using HSL for Headers */
+#h-blue   { background-color: hsl(204, 70%, 40%); } 
+#h-green  { background-color: hsl(160, 50%, 30%); } 
+#h-orange { background-color: hsl(35, 80%, 45%); }  
 
-/* Paragraphs with RGB colors - Modern "Card" style */
 .assignment-p {
-    /* Using RGB with high alpha (0.95) for a crisp, clean white background */
-    background-color: rgba(248, 249, 250, 0.95); 
-    padding: 25px;
+    /* Using RGB with slight transparency for the paragraph background */
+    background-color: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    color: #ecf0f1; 
+    width: 85%;
     margin: 0 auto 30px auto;
-    width: 80%;
-    color: #2c3e50; /* Dark slate text on light background for readability */
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-left: 6px solid #3498db; /* Blue accent border */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
 }
 
-/* --- Link Styling --- */
+/* --- Links & Navigation --- */
 a {
-    color: #3498db;
+    color: #f1c40f; /* Gold links stand out against blue/dark background */
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 a:hover {
-    color: #f39c12; /* Warm Gold hover color */
+    color: #ffffff;
     text-decoration: underline;
 }
 
-/* --- Table & Figure Adjustments --- */
+/* --- Table Styling --- */
 table {
     border-collapse: collapse;
-    background-color: #2c3e50;
+    background-color: #1c2833;
     border: 2px solid #3498db !important;
 }
-
-figcaption {
-    font-style: italic;
-    color: #bdc3c7;
-    padding: 10px;
-}
-
