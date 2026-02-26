@@ -1,46 +1,45 @@
-/* Color Theory Applied: Professional Slate & Contrast Palette */
-
+/* --- Global Page Styling --- */
 body {
-    /* Updated background: A professional slate grey instead of standard grey */
-    background-color: #2c3e50; 
+    /* Using a professional deep slate blue for the page background */
+    background-color: #1a252f; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Soft white text to contrast the dark background */
-    color: #ecf0f1; 
+    /* Soft white text for better readability on dark background */
+    color: #f8f9fa; 
     margin: 0;
     padding: 20px;
 }
 
-/* Specific styling for the Main Title */
+/* --- Typography & Headers --- */
 h1 {
     font-family: 'Georgia', serif;
-    color: #3498db; /* Bright blue for emphasis */
+    color: #3498db; /* Bright Azure Blue */
     border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
-/* Different font and color for Subheaders */
+/* Subheaders - Silver for a clean look */
 h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', serif;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #bdc3c7; /* Light silver */
+    color: #bdc3c7; 
 }
 
 h3 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', serif;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #3498db; /* Consistent branding blue */
+    color: #5dade2; /* Lighter Blue */
 }
 
-/* Paragraph styling */
+/* Global Paragraph styling */
 p {
     line-height: 1.6;
     font-size: 1.1em;
     color: #ecf0f1;
 }
 
-/* Horizontal Rule styling for better separation */
+/* Horizontal Rule for clean section breaks */
 hr {
     border: 0;
     height: 1px;
@@ -48,51 +47,61 @@ hr {
     margin: 40px 0;
 }
 
-/* --- Assignment Additions --- */
+/* --- Assignment: HSL Headers & RGB Paragraphs --- */
 
-/* Headers with HSL colors - Using varied saturations for "Aesthetic Flow" */
+/* Headers with HSL colors and consistent width */
 .assignment-header {
-    width: 75%;
-    margin: 20px auto;
+    width: 80%;
+    margin: 30px auto 0 auto;
     padding: 15px;
     height: auto;
-    border-radius: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: white; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds depth */
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
 }
 
-/* HSL: Hue, Saturation, Lightness */
-#h-blue   { background-color: hsl(204, 70%, 53%); } /* Primary Blue */
-#h-green  { background-color: hsl(145, 63%, 42%); } /* Emerald Green */
-#h-orange { background-color: hsl(28, 80%, 52%); }  /* Action Orange */
+/* Unique HSL Identities */
+#h-blue   { background-color: hsl(204, 70%, 45%); }  /* Deep Sky Blue */
+#h-green  { background-color: hsl(160, 60%, 35%); }  /* Emerald Teal */
+#h-orange { background-color: hsl(25, 75%, 45%); }   /* Burnt Orange */
 
-/* Paragraphs with RGB colors - Using RGBA for soft transparency */
+/* Paragraphs with RGB colors - Modern "Card" style */
 .assignment-p {
-    /* RGB: Pure white background with 95% opacity for maximum readability */
-    background-color: rgba(236, 240, 241, 0.95); 
+    /* Using RGB with high alpha (0.95) for a crisp, clean white background */
+    background-color: rgba(248, 249, 250, 0.95); 
     padding: 25px;
-    margin: -10px auto 20px auto; /* Slightly overlaps the header for a modern look */
+    margin: 0 auto 30px auto;
     width: 80%;
-    color: #2c3e50; /* Dark text on light background */
-    border-radius: 0 0 10px 10px;
-    border-left: 5px solid #3498db;
+    color: #2c3e50; /* Dark slate text on light background for readability */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 6px solid #3498db; /* Blue accent border */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-/* Table styling for aesthetic consistency */
-table {
-    border-collapse: collapse;
-    background-color: #34495e;
-    color: white;
-}
-
-/* Link styling */
+/* --- Link Styling --- */
 a {
     color: #3498db;
     text-decoration: none;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
 a:hover {
-    color: #e67e22; /* Complementary orange hover effect */
+    color: #f39c12; /* Warm Gold hover color */
+    text-decoration: underline;
+}
+
+/* --- Table & Figure Adjustments --- */
+table {
+    border-collapse: collapse;
+    background-color: #2c3e50;
+    border: 2px solid #3498db !important;
+}
+
+figcaption {
+    font-style: italic;
+    color: #bdc3c7;
+    padding: 10px;
 }
 
