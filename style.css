@@ -1,125 +1,129 @@
-/* --- Global Aesthetic: Professional Portfolio --- */
-body {
-    background-color: #121920; /* Deep Navy-Slate */
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #e0e0e0;
+/* --- 2026 Professional Design System --- */
+
+/* 1. Global Reset & Base */
+* {
     margin: 0;
-    padding: 40px;
-    line-height: 1.8; /* Increased for readability */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- Professional Typography --- */
+body {
+    background-color: #121417; /* Deep Charcoal/Walnut */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #e8e9eb;
+    line-height: 1.8;
+    padding: 50px 10% 100px 10%; /* Massive margins for professional 'breathing room' */
+}
+
+/* 2. Professional Typography */
 h1 {
     font-family: 'Georgia', serif;
-    font-size: 2.8em;
-    font-weight: 800;
-    color: #3498db; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    border-bottom: 3px solid #f1c40f; /* Gold accent */
-    padding-bottom: 20px;
-    letter-spacing: -1px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
 }
 
 h2 {
     font-family: 'Georgia', serif;
-    font-size: 1.8em;
-    color: #ecf0f1;
+    font-size: 2rem;
+    color: #d4af37; /* Metallic Gold */
+    border-left: 5px solid #d4af37;
+    padding-left: 20px;
+    margin: 60px 0 30px 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 40px;
+    letter-spacing: 3px;
 }
 
 h3 {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #5dade2; 
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #5da9e2; /* Ice Blue */
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
-/* Base Paragraph Styling */
 p {
-    font-size: 1.15em;
-    color: #bdc3c7;
-    margin-bottom: 20px;
-    max-width: 900px; /* Prevents lines from being too long to read */
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: #b0b3b8;
+    font-weight: 300;
 }
 
-/* --- Assignment Section: HSL & RGB --- */
+/* 3. The Assignment Requirements (HSL & RGB) */
 
+/* Headers: Using HSL with a subtle glass-morphism effect */
 .assignment-header {
-    width: 85%;
-    margin: 40px auto 0 auto;
-    padding: 20px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 25px;
     font-family: 'Georgia', serif;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ffffff;
-    border-radius: 12px 12px 0 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-
-/* Using HSL for Headers with a subtle gradient effect */
-#h-blue   { background: linear-gradient(to right, hsl(204, 70%, 40%), hsl(204, 70%, 30%)); } 
-#h-green  { background: linear-gradient(to right, hsl(160, 50%, 30%), hsl(160, 50%, 20%)); } 
-#h-orange { background: linear-gradient(to right, hsl(35, 80%, 45%), hsl(35, 80%, 35%)); }  
-
-.assignment-p {
-    /* Using RGB for the background with higher contrast */
-    background-color: rgba(255, 255, 255, 0.07); 
-    border: 1px solid rgba(52, 152, 219, 0.2);
-    border-top: none;
-    color: #f8f9fa; 
-    font-size: 1.1em;
-    width: 85%;
-    margin: 0 auto 40px auto;
-    padding: 30px;
-    border-radius: 0 0 12px 12px;
+    color: white;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    font-size: 1.6rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* --- Interactive Elements --- */
+#h-blue   { background-color: hsl(205, 75%, 35%); } /* Deep Nautical Blue */
+#h-green  { background-color: hsl(155, 55%, 25%); } /* Forest Pine */
+#h-orange { background-color: hsl(28, 85%, 40%); }  /* Burnt Copper */
+
+/* Paragraphs: Using RGB with sophisticated transparency */
+.assignment-p {
+    background-color: rgba(255, 255, 255, 0.04); /* Light mist effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    padding: 40px;
+    width: 100%;
+    margin-bottom: 60px;
+    border-radius: 0 0 15px 15px;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    backdrop-filter: blur(10px); /* Modern blur effect */
+}
+
+/* 4. Table & Interactive Elements */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 40px 0;
+}
+
+th {
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
 a {
-    color: #f1c40f; 
+    color: #d4af37;
     text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: bold;
 }
 
 a:hover {
     color: #ffffff;
-    text-decoration: underline;
-    text-shadow: 0 0 8px #f1c40f;
+    letter-spacing: 1px;
 }
 
-/* Table Styling - Clean & Modern */
-table {
-    width: 100%;
-    max-width: 800px;
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+    margin: 80px 0;
+}
+
+/* Images & Video */
+img, video {
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    display: block;
     margin: 20px auto;
-    border-collapse: separate;
-    border-spacing: 5px;
-}
-
-th {
-    padding: 15px;
-    border-radius: 4px;
-    font-family: 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-/* Figure & Image Styling */
-figure {
-    background: rgba(255,255,255,0.03);
-    padding: 20px;
-    border-radius: 15px;
-    margin: 20px 0;
-    overflow: hidden;
-}
-
-img {
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
