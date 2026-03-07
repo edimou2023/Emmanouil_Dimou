@@ -132,4 +132,24 @@ img, video {
     display: block;
     margin: 20px auto;
 }
+/* --- Link Styling with Hover State --- */
+a {
+    color: #d4af37; /
+    text-decoration: none; 
+    font-weight: bold;
+    transition: all 0.4s ease-in-out; 
+    display: inline-block; /
+}
+
+/* The Hover Class */
+a:hover {
+    color: #ffffff; 
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.8); 
+    letter-spacing: 1px; 
+    transform: translateY(-2px); 
+
+a:active {
+    transform: translateY(0);
+    color: #5da9e2; 
+}
 
