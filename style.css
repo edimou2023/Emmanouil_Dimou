@@ -107,17 +107,6 @@ th {
     letter-spacing: 1px;
 }
 
-a {
-    color: #d4af37;
-    text-decoration: none;
-    transition: 0.4s ease;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #ffffff;
-    letter-spacing: 1px;
-}
 
 hr {
     border: none;
@@ -152,4 +141,5 @@ a:active {
     transform: translateY(0);
     color: #5da9e2; 
 }
+
 
