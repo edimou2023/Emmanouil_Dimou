@@ -1,6 +1,13 @@
-/* --- 2026 Professional Design System --- */
+/* 1. Font Squirrel Implementation */
+/* Simulating a font downloaded from Font Squirrel */
+@font-face {
+    font-family: 'BebasCustom';
+    src: url('https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-/* 1. Global Reset & Base */
+/* 2. Global Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -8,72 +15,73 @@
 }
 
 body {
-    background-color: #121417; /* Deep Charcoal/Walnut */
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #121417; 
+    /* GOOGLE FONT APPLIED TO PARAGRAPHS */
+    font-family: 'Inter', sans-serif; 
     color: #e8e9eb;
     line-height: 1.8;
-    padding: 50px 10% 100px 10%; /* Massive margins for professional 'breathing room' */
+    padding: 50px 10% 100px 10%; 
 }
 
-/* 2. Professional Typography */
-h1 {
-    font-family: 'Georgia', serif;
-    font-size: 3.5rem;
+/* 3. Professional Typography */
+h1, h2, h3, h4, h5, .assignment-header {
+    /* CUSTOM FONT SQUIRREL NAME APPLIED TO HEADERS */
+    font-family: 'BebasCustom', sans-serif;
     font-weight: 900;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.5rem;
     color: #ffffff;
     text-align: center;
-    letter-spacing: -2px;
+    letter-spacing: 2px;
     margin-bottom: 30px;
 }
 
 h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
-    color: #d4af37; /* Metallic Gold */
+    font-size: 2.5rem;
+    color: #d4af37; 
     border-left: 5px solid #d4af37;
     padding-left: 20px;
     margin: 60px 0 30px 0;
-    text-transform: uppercase;
     letter-spacing: 3px;
 }
 
 h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #5da9e2; /* Ice Blue */
+    font-size: 1.8rem;
+    color: #5da9e2; 
     margin-bottom: 15px;
-    text-transform: uppercase;
 }
 
-p {
+p, li, figcaption {
+    font-family: 'Inter', sans-serif; /* Google Font for body */
     font-size: 1.15rem;
     margin-bottom: 25px;
     color: #b0b3b8;
     font-weight: 300;
 }
 
-/* 3. The Assignment Requirements (HSL & RGB) */
+/* 4. The Assignment Requirements (HSL & RGB) */
 
-/* Headers: Using HSL with a subtle glass-morphism effect */
 .assignment-header {
     width: 100%;
     margin-top: 50px;
     padding: 25px;
-    font-family: 'Georgia', serif;
     color: white;
     text-align: center;
     border-radius: 15px 15px 0 0;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-#h-blue   { background-color: hsl(205, 75%, 35%); } /* Deep Nautical Blue */
-#h-green  { background-color: hsl(155, 55%, 25%); } /* Forest Pine */
-#h-orange { background-color: hsl(28, 85%, 40%); }  /* Burnt Copper */
+#h-blue   { background-color: hsl(205, 75%, 35%); } 
+#h-green  { background-color: hsl(155, 55%, 25%); } 
+#h-orange { background-color: hsl(28, 85%, 40%); }  
 
-/* Paragraphs: Using RGB with sophisticated transparency */
 .assignment-p {
-    background-color: rgba(255, 255, 255, 0.04); /* Light mist effect */
+    /* RGB Background */
+    background-color: rgba(255, 255, 255, 0.04); 
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top: none;
     padding: 40px;
@@ -81,11 +89,10 @@ p {
     margin-bottom: 60px;
     border-radius: 0 0 15px 15px;
     color: #f1f1f1;
-    font-size: 1.1rem;
-    backdrop-filter: blur(10px); /* Modern blur effect */
+    backdrop-filter: blur(10px); 
 }
 
-/* 4. Table & Interactive Elements */
+/* 5. Table & Interactive Elements */
 table {
     width: 100%;
     border-collapse: separate;
@@ -96,14 +103,14 @@ table {
 th {
     padding: 20px;
     border-radius: 8px;
-    font-size: 0.8rem;
+    font-family: 'BebasCustom', sans-serif;
     letter-spacing: 1px;
 }
 
 a {
     color: #d4af37;
     text-decoration: none;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.4s ease;
     font-weight: bold;
 }
 
@@ -119,7 +126,6 @@ hr {
     margin: 80px 0;
 }
 
-/* Images & Video */
 img, video {
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
