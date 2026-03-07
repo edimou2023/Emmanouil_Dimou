@@ -91,7 +91,7 @@ p, li, figcaption {
     background-position: center;
 }
 
-/* MATCHING THEMED IMAGES */
+
 
 /* Blue Header: Digital Marketing Theme */
 #h-blue { 
@@ -173,6 +173,7 @@ a:active {
     transform: translateY(0);
     color: #5da9e2; 
 }
+
 
 
 
