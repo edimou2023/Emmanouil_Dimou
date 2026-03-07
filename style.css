@@ -31,23 +31,40 @@ h1, h2, h3, h4, h5, .assignment-header {
     text-transform: uppercase;
 }
 
+/* --- 1. Header Background Images --- */
+
 h1 {
+    font-family: 'BebasCustom', sans-serif;
     font-size: 3.5rem;
     color: #ffffff;
     text-align: center;
     letter-spacing: 2px;
     margin-bottom: 30px;
+    
+    /* Background Image Properties */
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Subtle texture */
+    background-repeat: repeat;
+    background-size: auto;
+    padding: 40px 20px;
+    border-bottom: 4px solid #f1c40f;
 }
 
 h2 {
+    font-family: 'BebasCustom', sans-serif;
     font-size: 2.5rem;
-    color: #d4af37; 
-    border-left: 5px solid #d4af37;
-    padding-left: 20px;
+    color: #ffffff; /* Changed to white for better contrast on images */
     margin: 60px 0 30px 0;
     letter-spacing: 3px;
+    
+    /* Background Image Properties */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1000'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 30px; /* Padding ensures the text doesn't touch the image edges */
+    border-left: 8px solid #d4af37;
+    border-radius: 4px;
 }
-
 h3 {
     font-size: 1.8rem;
     color: #5da9e2; 
@@ -63,22 +80,37 @@ p, li, figcaption {
 }
 
 /* 4. The Assignment Requirements (HSL & RGB) */
+/* --- 2. Assignment Section Headers (HSL + Background Images) --- */
 
 .assignment-header {
     width: 100%;
     margin-top: 50px;
-    padding: 25px;
+    padding: 40px 25px; /* Large padding to show off the background image */
     color: white;
     text-align: center;
     border-radius: 15px 15px 0 0;
     font-size: 1.8rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    
+    /* Global background settings for these specific headers */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+#h-blue { 
+    background-color: hsl(205, 75%, 35%); /* Fallback color */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1000'); 
+} 
 
-#h-blue   { background-color: hsl(205, 75%, 35%); } 
-#h-green  { background-color: hsl(155, 55%, 25%); } 
-#h-orange { background-color: hsl(28, 85%, 40%); }  
+#h-green { 
+    background-color: hsl(155, 55%, 25%); 
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000');
+} 
 
+#h-orange { 
+    background-color: hsl(28, 85%, 40%); 
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=1000');
+}
 .assignment-p {
     /* RGB Background */
     background-color: rgba(255, 255, 255, 0.04); 
@@ -141,5 +173,6 @@ a:active {
     transform: translateY(0);
     color: #5da9e2; 
 }
+
 
 
