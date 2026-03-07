@@ -1,5 +1,4 @@
 /* 1. Font Squirrel Implementation */
-/* Simulating a font downloaded from Font Squirrel */
 @font-face {
     font-family: 'BebasCustom';
     src: url('https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2') format('woff2');
@@ -16,7 +15,6 @@
 
 body {
     background-color: #121417; 
-    /* GOOGLE FONT APPLIED TO PARAGRAPHS */
     font-family: 'Inter', sans-serif; 
     color: #e8e9eb;
     line-height: 1.8;
@@ -25,7 +23,6 @@ body {
 
 /* 3. Professional Typography */
 h1, h2, h3, h4, h5, .assignment-header {
-    /* CUSTOM FONT SQUIRREL NAME APPLIED TO HEADERS */
     font-family: 'BebasCustom', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
@@ -34,37 +31,36 @@ h1, h2, h3, h4, h5, .assignment-header {
 /* --- 1. Header Background Images --- */
 
 h1 {
-    font-family: 'BebasCustom', sans-serif;
     font-size: 3.5rem;
     color: #ffffff;
     text-align: center;
     letter-spacing: 2px;
     margin-bottom: 30px;
     
-    /* Background Image Properties */
-    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Subtle texture */
+    /* Background Image: Subtle Carbon Fiber Texture */
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
     background-repeat: repeat;
     background-size: auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
     border-bottom: 4px solid #f1c40f;
 }
 
 h2 {
-    font-family: 'BebasCustom', sans-serif;
     font-size: 2.5rem;
-    color: #ffffff; /* Changed to white for better contrast on images */
+    color: #ffffff; 
     margin: 60px 0 30px 0;
     letter-spacing: 3px;
     
-    /* Background Image Properties */
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1000'); 
+    /* Global Background for standard h2 tags */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px 30px; /* Padding ensures the text doesn't touch the image edges */
+    padding: 30px; 
     border-left: 8px solid #d4af37;
     border-radius: 4px;
 }
+
 h3 {
     font-size: 1.8rem;
     color: #5da9e2; 
@@ -72,47 +68,50 @@ h3 {
 }
 
 p, li, figcaption {
-    font-family: 'Inter', sans-serif; /* Google Font for body */
+    font-family: 'Inter', sans-serif; 
     font-size: 1.15rem;
     margin-bottom: 25px;
     color: #b0b3b8;
     font-weight: 300;
 }
 
-/* 4. The Assignment Requirements (HSL & RGB) */
-/* --- 2. Assignment Section Headers (HSL + Background Images) --- */
+/* 4. The Assignment Requirements (HSL & RGB Headers with Matching Images) */
 
 .assignment-header {
     width: 100%;
     margin-top: 50px;
-    padding: 40px 25px; /* Large padding to show off the background image */
+    padding: 50px 25px; 
     color: white;
     text-align: center;
     border-radius: 15px 15px 0 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    
-    /* Global background settings for these specific headers */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+/* MATCHING THEMED IMAGES */
+
+/* Blue Header: Digital Marketing Theme */
 #h-blue { 
-    background-color: hsl(205, 75%, 35%); /* Fallback color */
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1000'); 
+    background-color: hsl(205, 75%, 35%); 
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000'); 
 } 
 
+/* Green Header: MIS/Efficiency/Tech Theme */
 #h-green { 
     background-color: hsl(155, 55%, 25%); 
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000');
 } 
 
+/* Orange Header: Basketball/Athletics Theme */
 #h-orange { 
     background-color: hsl(28, 85%, 40%); 
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=1000');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1000');
 }
+
 .assignment-p {
-    /* RGB Background */
     background-color: rgba(255, 255, 255, 0.04); 
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top: none;
@@ -137,8 +136,8 @@ th {
     border-radius: 8px;
     font-family: 'BebasCustom', sans-serif;
     letter-spacing: 1px;
+    color: white;
 }
-
 
 hr {
     border: none;
@@ -153,26 +152,28 @@ img, video {
     display: block;
     margin: 20px auto;
 }
+
 /* --- Link Styling with Hover State --- */
 a {
-    color: #d4af37; /
+    color: #d4af37; 
     text-decoration: none; 
     font-weight: bold;
     transition: all 0.4s ease-in-out; 
-    display: inline-block; /
+    display: inline-block; 
 }
 
-/* The Hover Class */
 a:hover {
     color: #ffffff; 
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.8); 
     letter-spacing: 1px; 
     transform: translateY(-2px); 
+}
 
 a:active {
     transform: translateY(0);
     color: #5da9e2; 
 }
+
 
 
 
