@@ -7,19 +7,19 @@
 }
 
 body {
-    background-color: #0f1113; /* Near Black */
-    font-family: 'Montserrat', sans-serif; /* Smooth Sans-Serif */
-    color: #d1d1d1;
+    background-color: #0d0f11;
+    font-family: 'Montserrat', sans-serif;
+    color: #cbd5e0;
     line-height: 1.8;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* --- Shiny Gold Effect --- */
+/* --- Shiny Gold Gradient --- */
 .shiny-gold-text {
     background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
     -webkit-background-clip: text;
@@ -28,118 +28,158 @@ body {
     font-weight: 700;
 }
 
+.sub-header {
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 40px;
+}
+
+/* --- The Gold Button --- */
+.btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-gold {
+    display: inline-block;
+    padding: 16px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728);
+    box-shadow: 0 10px 20px rgba(191, 149, 63, 0.3);
+    transition: all 0.4s ease;
+    border: none;
+}
+
+.btn-gold:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(191, 149, 63, 0.5);
+    color: #000;
+}
+
 /* --- Section Styling --- */
 section {
     margin-bottom: 80px;
     background: rgba(255, 255, 255, 0.02);
-    padding: 40px;
-    border-radius: 15px;
+    padding: 50px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .section-title {
     font-family: 'Playfair Display', serif;
     color: #ffffff;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 /* --- THE GAME PARAGRAPH REQUIREMENTS --- */
 #the-game-para {
     width: 400px;           /* Requirement 1 */
     font-style: italic;     /* Requirement 1 */
-    border-top: 2px solid #d4af37;    /* Requirement 2 (Shiny Gold) */
-    border-bottom: 2px solid #d4af37; /* Requirement 2 (Shiny Gold) */
-    padding: 30px 10px;     /* Requirement 3 */
-    margin: 40px auto;      /* Requirement 4: Centered */
+    border-top: 2px solid #d4af37;    /* Requirement 2 */
+    border-bottom: 2px solid #d4af37; /* Requirement 2 */
+    padding: 30px 20px;     /* Requirement 3 */
+    margin: 50px auto;      /* Requirement 4 */
     
-    /* Added "Nice" Stuff */
     text-align: center;
-    color: #ffffff;
-    background: rgba(212, 175, 55, 0.05); /* Very subtle gold tint */
-    line-height: 1.5;
+    color: #f1f1f1;
+    line-height: 1.6;
 }
 
 /* --- MIS Section Styling --- */
 .assignment-header {
     font-family: 'Playfair Display', serif;
-    padding: 20px;
-    border-radius: 8px 8px 0 0;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
     font-size: 1.4rem;
-    margin-top: 30px;
+    margin-top: 40px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* HSL Colors */
-#h-blue { background: hsl(210, 50%, 30%); }
-#h-green { background: hsl(140, 40%, 25%); }
-#h-orange { background: hsl(25, 60%, 35%); }
+#h-blue { background: hsl(215, 60%, 25%); }
+#h-green { background: hsl(150, 45%, 20%); }
+#h-orange { background: hsl(30, 70%, 30%); }
 
 .assignment-p {
-    background-color: rgba(255, 255, 255, 0.03); /* RGB with transparency */
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-top: none;
-    border-radius: 0 0 8px 8px;
-    font-size: 1rem;
+    border-radius: 0 0 12px 12px;
 }
 
-/* --- Navigation & Links --- */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 40px 0;
-}
-
-a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 15px #d4af37;
-}
-
-/* --- Table & Media --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    border: 1px solid #333;
-    padding: 15px;
-    color: #fff;
-}
-
+/* --- Layout & Media --- */
 .media-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 40px;
+    gap: 30px;
+    margin-bottom: 60px;
 }
 
 img, video {
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    filter: grayscale(20%);
+    transition: 0.5s;
 }
+
+img:hover { filter: grayscale(0%); }
 
 .bio-layout {
     display: flex;
+    gap: 40px;
     align-items: center;
-    gap: 30px;
 }
 
 .bio-img {
-    width: 180px;
-    border: 2px solid #d4af37;
+    width: 220px;
+    border: 3px solid #d4af37;
+    flex-shrink: 0;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #d4af37;
+}
+
+/* --- Table --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+    color: #d4af37;
+    font-family: 'Playfair Display', serif;
 }
