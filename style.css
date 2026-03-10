@@ -82,12 +82,12 @@ section {
 
 /* --- THE GAME PARAGRAPH REQUIREMENTS --- */
 #the-game-para {
-    width: 400px;           /* Requirement 1 */
-    font-style: italic;     /* Requirement 1 */
-    border-top: 2px solid #d4af37;    /* Requirement 2 */
-    border-bottom: 2px solid #d4af37; /* Requirement 2 */
-    padding: 30px 20px;     /* Requirement 3 */
-    margin: 50px auto;      /* Requirement 4 */
+    width: 400px;          
+    font-style: italic;    
+    border-top: 2px solid #d4af37;    
+    border-bottom: 2px solid #d4af37; 
+    padding: 30px 20px;     
+    margin: 50px auto;      
     
     text-align: center;
     color: #f1f1f1;
@@ -183,3 +183,4 @@ th {
     color: #d4af37;
     font-family: 'Playfair Display', serif;
 }
+
