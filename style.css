@@ -173,6 +173,17 @@ a:active {
     transform: translateY(0);
     color: #5da9e2; 
 }
+.div1 {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    padding: 
+}
+.p1 {
+    width: 50%;
+    height: 50%;
+    background-color: gold;
+}
 
 
 
