@@ -85,7 +85,7 @@ section {
     font-style: italic;     
     padding: 30px 20px;     
     margin: 50px auto;      
-    border: 8px solid; /* Defines the thickness 
+    border: 8px solid;
     border-image-source: linear-gradient(45deg, #bf953f, #ffd700, #b38728, #fbf5b7, #aa771c);   
     border-image-slice: 1; 
     text-align: center;
