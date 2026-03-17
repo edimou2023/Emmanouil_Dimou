@@ -80,22 +80,17 @@ section {
     margin-bottom: 40px;
 }
 
-/* --- THE GAME PARAGRAPH (Updated with Border Image) --- */
 #the-game-para {
-    width: 400px;               /* Requirement 1: Width */
-    font-style: italic;         /* Requirement 1: Italic */
-    padding: 30px 25px;         /* Requirement 3: Padding */
-    margin: 50px auto;          /* Requirement 4: Centered */
-    border: 10px solid; 
-    /* Link to a square Gold Foil PNG texture */
-    border-image-source: url('https://www.transparenttextures.com/patterns/gold-dust.png'); 
-    border-image-slice: 30; 
-    border-image-repeat: round; 
+    width: 400px;           
+    font-style: italic;     
+    padding: 30px 20px;     
+    margin: 50px auto;      
+    border: 8px solid; /* Defines the thickness 
+    border-image-source: linear-gradient(45deg, #bf953f, #ffd700, #b38728, #fbf5b7, #aa771c);   
+    border-image-slice: 1; 
     text-align: center;
-    color: #ffffff;
+    color: #f1f1f1;
     line-height: 1.6;
-    background: rgba(255, 255, 255, 0.01); /* Very faint lift from the background */
-    box-shadow: inset 0 0 15px rgba(191, 149, 63, 0.1); /* Subtle internal gold glow */
 }
 
 /* --- MIS Section Styling --- */
