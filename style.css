@@ -8,9 +8,9 @@
 
 body {
     background-color: #0d0f11;
-    /* BACKGROUND IMAGE SETTINGS */
-    background-image: linear-gradient(rgba(13, 15, 17, 0.85), rgba(13, 15, 17, 0.85)), url('headshot.jpg'); 
-    background-attachment: fixed;
+    /* 3. BACKGROUND IMAGE: Centered and stays under elements */
+    background-image: linear-gradient(rgba(13, 15, 17, 0.8), rgba(13, 15, 17, 0.8)), url('background.jpg'); 
+    background-attachment: fixed; /* Makes image stay still while you scroll */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,52 +20,51 @@ body {
     line-height: 1.8;
 }
 
-/* --- STICKY HEADER --- */
-.sticky-header {
+/* --- 1. STICKY TITLE (Name Title) --- */
+.sticky-top-bar {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background: rgba(13, 15, 17, 0.9); /* Semi-transparent so background shows slightly */
-    backdrop-filter: blur(10px); /* Smooth glass effect */
-    padding: 20px 0;
+    width: 100%;
+    z-index: 2000;
+    background: rgba(13, 15, 17, 0.9);
+    backdrop-filter: blur(15px); /* Modern smooth blur */
+    padding: 15px 0;
     text-align: center;
-    border-bottom: 1px solid rgba(191, 149, 63, 0.2);
+    border-bottom: 1px solid rgba(191, 149, 63, 0.3);
 }
 
-/* --- FLOATING QUOTE (Right Side) --- */
-.floating-quote {
+/* --- 2. FIXED QUOTE (Right Side) --- */
+.fixed-quote-sidebar {
     position: fixed;
-    right: 30px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
-    width: 180px;
-    z-index: 500;
+    width: 220px;
+    z-index: 1000;
     text-align: right;
-    pointer-events: none; /* Allows clicking through to elements under it */
 }
 
-.floating-quote p {
+.fixed-quote-sidebar p {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 1.1rem;
     color: #ffd700;
     margin-bottom: 10px;
-    line-height: 1.4;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
 }
 
-.floating-quote span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
+.quote-author {
+    font-size: 0.75rem;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #fff;
     font-weight: 600;
+    display: block;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 900px; /* Narrower container to make room for the fixed quote */
     margin: 0 auto;
-    padding: 20px 20px 60px 20px;
+    padding: 40px 20px;
 }
 
 /* --- Shiny Gold Gradient --- */
@@ -82,42 +81,17 @@ body {
     letter-spacing: 4px;
     font-size: 0.8rem;
     color: #718096;
-    margin-top: 5px;
-}
-
-/* --- The Gold Button --- */
-.btn-wrapper {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.btn-gold {
-    display: inline-block;
-    padding: 14px 35px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color: #000;
-    border-radius: 50px;
-    background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728);
-    transition: 0.4s ease;
-}
-
-.btn-gold:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
+    margin-top: 20px;
 }
 
 /* --- Section Styling --- */
 section {
     margin-bottom: 80px;
-    background: rgba(13, 15, 17, 0.7); /* Darker so text is readable over BG image */
+    background: rgba(255, 255, 255, 0.03); /* Semi-transparent sections */
     padding: 50px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
 
 .section-title {
@@ -125,9 +99,10 @@ section {
     color: #ffffff;
     font-size: 2.2rem;
     margin-bottom: 40px;
+    text-align: center;
 }
 
-/* --- THE GAME PARAGRAPH (Strict Requirements) --- */
+/* --- THE GAME PARAGRAPH (Requirements Check) --- */
 #the-game-para {
     width: 400px;           
     font-style: italic;     
@@ -138,43 +113,6 @@ section {
     border-image-slice: 1; 
     text-align: center;
     color: #f1f1f1;
-    line-height: 1.6;
-}
-
-/* --- MIS Section Styling --- */
-.assignment-header {
-    font-family: 'Playfair Display', serif;
-    padding: 20px;
-    border-radius: 12px 12px 0 0;
-    font-size: 1.2rem;
-    margin-top: 40px;
-    color: white;
-}
-
-#h-blue { background: rgba(30, 58, 95, 0.8); }
-#h-green { background: rgba(20, 60, 40, 0.8); }
-#h-orange { background: rgba(90, 50, 20, 0.8); }
-
-.assignment-p {
-    background-color: rgba(255, 255, 255, 0.03);
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-top: none;
-    border-radius: 0 0 12px 12px;
-}
-
-/* --- Layout & Media --- */
-img.bio-img {
-    width: 200px;
-    border: 3px solid #d4af37;
-    flex-shrink: 0;
-    border-radius: 15px;
-}
-
-.bio-layout {
-    display: flex;
-    gap: 40px;
-    align-items: center;
 }
 
 /* --- Navigation --- */
@@ -182,7 +120,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 40px 0 60px 0;
+    margin: 30px 0 60px 0;
 }
 
 nav a {
@@ -192,17 +130,46 @@ nav a {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-/* --- Table --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
+nav a:hover { color: #fff; }
+
+/* --- Miscellaneous --- */
+.bio-img {
+    width: 180px;
+    border: 3px solid #d4af37;
+    border-radius: 10px;
 }
 
-th, td {
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+.bio-layout { display: flex; gap: 30px; align-items: center; }
+
+.btn-wrapper { text-align: center; margin-top: 30px; }
+
+.btn-gold {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728);
 }
 
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; border: 1px solid rgba(255, 255, 255, 0.1); }
 th { color: #d4af37; font-family: 'Playfair Display', serif; }
+
+.assignment-header {
+    background: rgba(191, 149, 63, 0.2);
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+.assignment-p {
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
