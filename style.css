@@ -8,15 +8,64 @@
 
 body {
     background-color: #0d0f11;
+    /* BACKGROUND IMAGE SETTINGS */
+    background-image: linear-gradient(rgba(13, 15, 17, 0.85), rgba(13, 15, 17, 0.85)), url('headshot.jpg'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     font-family: 'Montserrat', sans-serif;
     color: #cbd5e0;
     line-height: 1.8;
 }
 
+/* --- STICKY HEADER --- */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(13, 15, 17, 0.9); /* Semi-transparent so background shows slightly */
+    backdrop-filter: blur(10px); /* Smooth glass effect */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(191, 149, 63, 0.2);
+}
+
+/* --- FLOATING QUOTE (Right Side) --- */
+.floating-quote {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    z-index: 500;
+    text-align: right;
+    pointer-events: none; /* Allows clicking through to elements under it */
+}
+
+.floating-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.floating-quote span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 20px 20px 60px 20px;
 }
 
 /* --- Shiny Gold Gradient --- */
@@ -31,9 +80,9 @@ body {
 .sub-header {
     text-align: center;
     letter-spacing: 4px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #718096;
-    margin-bottom: 40px;
+    margin-top: 5px;
 }
 
 /* --- The Gold Button --- */
@@ -44,7 +93,7 @@ body {
 
 .btn-gold {
     display: inline-block;
-    padding: 16px 40px;
+    padding: 14px 35px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -53,33 +102,32 @@ body {
     color: #000;
     border-radius: 50px;
     background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728);
-    box-shadow: 0 10px 20px rgba(191, 149, 63, 0.3);
-    transition: all 0.4s ease;
-    border: none;
+    transition: 0.4s ease;
 }
 
 .btn-gold:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(191, 149, 63, 0.5);
-    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
 }
 
 /* --- Section Styling --- */
 section {
     margin-bottom: 80px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(13, 15, 17, 0.7); /* Darker so text is readable over BG image */
     padding: 50px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
 }
 
 .section-title {
     font-family: 'Playfair Display', serif;
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 40px;
 }
 
+/* --- THE GAME PARAGRAPH (Strict Requirements) --- */
 #the-game-para {
     width: 400px;           
     font-style: italic;     
@@ -96,41 +144,32 @@ section {
 /* --- MIS Section Styling --- */
 .assignment-header {
     font-family: 'Playfair Display', serif;
-    padding: 25px;
+    padding: 20px;
     border-radius: 12px 12px 0 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-top: 40px;
     color: white;
 }
 
-#h-blue { background: hsl(215, 60%, 25%); }
-#h-green { background: hsl(150, 45%, 20%); }
-#h-orange { background: hsl(30, 70%, 30%); }
+#h-blue { background: rgba(30, 58, 95, 0.8); }
+#h-green { background: rgba(20, 60, 40, 0.8); }
+#h-orange { background: rgba(90, 50, 20, 0.8); }
 
 .assignment-p {
     background-color: rgba(255, 255, 255, 0.03);
-    padding: 35px;
+    padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-top: none;
     border-radius: 0 0 12px 12px;
 }
 
 /* --- Layout & Media --- */
-.media-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-img, video {
-    width: 100%;
+img.bio-img {
+    width: 200px;
+    border: 3px solid #d4af37;
+    flex-shrink: 0;
     border-radius: 15px;
-    filter: grayscale(20%);
-    transition: 0.5s;
 }
-
-img:hover { filter: grayscale(0%); }
 
 .bio-layout {
     display: flex;
@@ -138,33 +177,21 @@ img:hover { filter: grayscale(0%); }
     align-items: center;
 }
 
-.bio-img {
-    width: 220px;
-    border: 3px solid #d4af37;
-    flex-shrink: 0;
-}
-
 /* --- Navigation --- */
 nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 80px;
+    margin: 40px 0 60px 0;
 }
 
 nav a {
     color: #d4af37;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #d4af37;
+    letter-spacing: 1px;
 }
 
 /* --- Table --- */
@@ -174,12 +201,8 @@ table {
 }
 
 th, td {
-    padding: 25px;
+    padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-th {
-    color: #d4af37;
-    font-family: 'Playfair Display', serif;
-}
-
+th { color: #d4af37; font-family: 'Playfair Display', serif; }
