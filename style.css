@@ -17,7 +17,7 @@ body {
     background-size: cover;
     
     /* Shift image down 80px so it sits perfectly "under" the sticky title */
-    background-position: center 80px; 
+    background-position: center 160px; 
     
     font-family: 'Montserrat', sans-serif;
     color: #cbd5e0;
