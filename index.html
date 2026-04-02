@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmanouil Dimou | Portfolio</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;1,300&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
     <div class="sticky-top-bar">
-        <h1 class="shiny-gold-text">EMMANOUIL DIMOU WEBSITE</h1>
+        <h1 id="top" class="shiny-gold-text">EMMANOUIL DIMOU WEBSITE</h1>
     </div>
 
     <div class="fixed-quote-sidebar">
@@ -31,27 +35,66 @@
             <a href="#contact">Contact</a>
         </nav>
 
+        <section id="bio">
+            <h2 class="section-title">Professional Biography</h2>
+            <div class="bio-container">
+                <figure class="bio-layout">
+                    <img src="headshot.jpg" alt="Headshot" class="bio-img">
+                    <figcaption>
+                        I am a student-athlete majoring in Business Administration with a minor in Management Information Systems, combining my interest in business strategy with technology-driven solutions. Originally from Greece, I moved abroad to pursue higher education and competitive athletics, an experience that has shaped my resilience, independence, and global perspective. 
+                        <br><br>
+                        Academically, I maintain a strong GPA and have a growing interest in how information systems, databases, and web technologies support modern businesses. I view web-based technology and design as essential tools in today’s digital world.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="teams">
+            <h2 class="section-title">Basketball Career</h2>
+            <table>
+                <tr>
+                    <th>Greek National Team</th>
+                    <th>Panathinaikos</th>
+                    <th>Kansas City</th>
+                    <th>Florida Tech</th>
+                </tr>
+                <tr>
+                    <td align="center">2016 - 2023</td>
+                    <td align="center">2012 - 2022</td>
+                    <td align="center">2022 - 2023</td>
+                    <td align="center">2023 - 2025</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="the-game-section">
+            <h2 class="section-title">Origin of the Court</h2>
+            <p id="the-game-para">
+                In December 1891, Dr. James Naismith invented basketball at a YMCA in Springfield, Massachusetts, to provide an indoor winter activity. Using a soccer ball and two peach baskets, he created 13 rules, allowing the game to spread quickly and evolve into a global sport. Basketball has transcended its origins as a mere sport to become a profound cultural and social force, significantly influencing society worldwide. As a unifying force, it bridges diverse communities, breaking down cultural and socioeconomic barriers, particularly in urban areas where it serves as a positive outlet for youth. 
+            </p>
+        </section>
+
         <section id="Extra_Info">
             <h2 class="section-title">MIS Insights</h2>
             <div class="mis-grid">
-                <div class="mis-col col-wide">
+                <div class="mis-col">
                     <h3 id="h-blue" class="assignment-header">AI Personalization</h3>
                     <div class="assignment-p">
-                        Artificial Intelligence has revolutionized digital marketing through <strong>Predictive Modeling</strong>. By utilizing Machine Learning algorithms, businesses can now predict consumer behavior with 85% accuracy. In the Greek e-commerce landscape, these engines analyze micro-interactions to build sentiment maps. This allows brands to pivot strategies in real-time, ensuring that marketing spend is optimized while increasing customer lifetime value through hyper-relevant content delivery. 
+                        Artificial Intelligence has revolutionized digital marketing through <strong>Predictive Modeling</strong>. By utilizing Machine Learning algorithms, businesses can now predict consumer behavior with 85% accuracy. In the Greek e-commerce landscape, these engines analyze micro-interactions to build sentiment maps, allowing brands to pivot strategies in real-time. This level of granular data processing ensures that marketing spend is optimized while increasing customer lifetime value through hyper-relevant content delivery and automated behavioral triggers.
                     </div>
                 </div>
 
-                <div class="mis-col col-medium">
+                <div class="mis-col">
                     <h3 id="h-green" class="assignment-header">Data Efficiency</h3>
                     <div class="assignment-p">
-                        The modern MIS landscape is defined by <strong>Real-Time Data Processing</strong>. Businesses that integrate Big Data analytics reduce decision-making latency by nearly 40%. SQL-based relational databases combined with cloud-native architectures allow for seamless scalability and digital agility.
+                        The modern MIS landscape is defined by <strong>Real-Time Data Processing</strong>. Businesses that integrate Big Data analytics reduce decision-making latency by nearly 40%. Leveraging tools like SQL for database management allows firms to transform raw data into actionable strategic intelligence. By automating ETL processes, organizations shift focus from manual entry to high-level digital agility.
                     </div>
                 </div>
 
-                <div class="mis-col col-narrow">
+                <div class="mis-col">
                     <h3 id="h-orange" class="assignment-header">Predictive Athletics</h3>
                     <div class="assignment-p">
-                        In collegiate basketball, <strong>Advanced Sabermetrics</strong> and AI-based wearable technology are used to monitor player load. By ingesting Heart Rate Variability (HRV) and GPS data, coaching staffs can tailor practice intensities to individual physiological recovery states.
+                        In collegiate basketball, <strong>Advanced Sabermetrics</strong> and AI-based wearable technology are used to monitor player load and prevent injuries. Predictive analytics can identify fatigue patterns before they result in physical strain, increasing player longevity and performance efficiency through Heart Rate Variability tracking.
                     </div>
                 </div>
             </div>
@@ -63,7 +106,7 @@
                 <a href="https://www.linkedin.com/in/emmanouil-dimou" target="_blank" title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://www.espn.com/mens-college-basketball/player/_/id/5257082/emmanouil-dimou" target="_blank" title="ESPN Profile">
+                <a href="https://www.espn.com" target="_blank" title="ESPN Profile">
                     <i class="fas fa-basketball-ball"></i>
                 </a>
                 <a href="mailto:dimou.emmanouil@gmail.com" target="_blank" title="Email Me">
@@ -76,5 +119,8 @@
             <a href="#top" class="shiny-gold-text">Return to Top</a>
         </footer>
     </div>
+
+</body>
+</html>
 </body>
 </html>
