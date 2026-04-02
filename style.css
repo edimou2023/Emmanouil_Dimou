@@ -1,36 +1,186 @@
-/* --- Global Styles & Background (Unchanged) --- */
-* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #0d0f11;
+    
+    /* BACKGROUND IMAGE: Fixed and positioned under the header */
     background-image: linear-gradient(rgba(13, 15, 17, 0.8), rgba(13, 15, 17, 0.8)), url('background.jpg'); 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 80px;
+    background-position: center 80px; /* Starts exactly where sticky header ends */
+    
     font-family: 'Montserrat', sans-serif;
     color: #cbd5e0;
+    line-height: 1.8;
 }
 
-/* --- Sticky Title (Unchanged) --- */
+/* --- STICKY NAME TITLE --- */
 .sticky-top-bar {
     position: sticky;
     top: 0;
     width: 100%;
     height: 80px; 
     z-index: 2000;
-    background: #0d0f11;
+    background: #0d0f11; /* Solid dark background */
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid rgba(191, 149, 63, 0.4);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.7);
 }
 
-/* --- MIS 3-COLUMN GRID (Horizontal & Different Widths) --- */
+/* --- FIXED QUOTE (Right Side) --- */
+.fixed-quote-sidebar {
+    position: fixed;
+    right: 40px;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 220px;
+    z-index: 1000;
+    text-align: right;
+    pointer-events: none; /* Allows scrolling/clicking through the quote */
+}
+
+.fixed-quote-sidebar p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,1);
+}
+
+.quote-author {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* --- Main Layout --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sub-header {
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    color: #718096;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #d4af37;
+}
+
+/* --- Shiny Gold Gradient --- */
+.shiny-gold-text {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+/* --- Section Styling --- */
+section {
+    margin-bottom: 80px;
+    background: rgba(13, 15, 17, 0.75);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* --- Biography Image --- */
+.bio-layout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.bio-img {
+    width: 220px;
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+/* --- Basketball Table --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+    color: #d4af37;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* --- Stylized "The Game" Paragraph --- */
+#the-game-para {
+    width: 450px;           
+    font-style: italic;     
+    padding: 30px 20px;     
+    margin: 50px auto;      
+    border: 8px solid;
+    border-image-source: linear-gradient(45deg, #bf953f, #ffd700, #b38728, #fbf5b7, #aa771c);   
+    border-image-slice: 1; 
+    text-align: center;
+    color: #f1f1f1;
+}
+
+/* --- MIS GRID: 3 Columns Horizontal with Varied Widths --- */
 .mis-grid {
     display: grid;
-    /* This creates 3 columns side-by-side with different widths */
-    grid-template-columns: 1.3fr 1fr 0.7fr; 
+    grid-template-columns: 1.3fr 1fr 0.7fr; /* Different widths as requested */
     gap: 20px;
     align-items: stretch;
 }
@@ -55,38 +205,45 @@ body {
 
 .assignment-p {
     background: rgba(255, 255, 255, 0.03);
-    padding: 20px;
+    padding: 25px;
     font-size: 0.85rem;
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-top: none;
     border-radius: 0 0 12px 12px;
-    flex-grow: 1; /* Ensures they all reach the same bottom line */
+    flex-grow: 1; /* Aligns bottom of boxes */
 }
 
-/* --- CONTACT SECTION (Horizontal Icons) --- */
+/* --- CONTACT SECTION: Horizontal Icons --- */
 .contact-icons-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 60px;
     padding: 20px 0;
 }
 
 .contact-icons-row a {
     color: #ffd700;
-    font-size: 2.5rem; /* Large, slick icons */
-    transition: all 0.3s ease;
+    font-size: 3rem;
+    transition: all 0.4s ease;
     text-decoration: none;
 }
 
 .contact-icons-row a:hover {
     color: #fff;
-    transform: translateY(-8px) scale(1.1);
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    transform: translateY(-10px) scale(1.15);
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
 }
 
-/* --- Container & Theme Elements (Unchanged) --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-.shiny-gold-text { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Playfair Display', serif; font-weight: 700; }
-section { margin-bottom: 60px; background: rgba(13, 15, 17, 0.75); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
-.section-title { font-family: 'Playfair Display', serif; color: #ffffff; font-size: 2rem; margin-bottom: 30px; text-align: center; }
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
