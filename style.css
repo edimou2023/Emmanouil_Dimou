@@ -8,13 +8,11 @@
 
 body {
     background-color: #0d0f11;
-    /* BACKGROUND IMAGE: Fixed and starting 80px down */
     background-image: linear-gradient(rgba(13, 15, 17, 0.75), rgba(13, 15, 17, 0.75)), url('background.jpg'); 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 80px; 
-    
     font-family: 'Montserrat', sans-serif;
     color: #cbd5e0;
     line-height: 1.8;
@@ -35,37 +33,9 @@ body {
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-/* --- FIXED QUOTE --- */
-.fixed-quote-sidebar {
-    position: fixed;
-    right: 40px;
-    top: 55%;
-    transform: translateY(-50%);
-    width: 150px;
-    z-index: 1000;
-    text-align: right;
-    pointer-events: none;
-}
-
-.fixed-quote-sidebar p {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.15rem;
-    color: #ffd700;
-    text-shadow: 2px 2px 15px rgba(0,0,0,1);
-}
-
-.quote-author {
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    color: #ffffff;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
 /* --- Layout --- */
 .container {
-    max-width: 1100px; /* Slightly wider for the 3-column layout */
+    max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px 100px 20px;
 }
@@ -76,6 +46,7 @@ body {
     -webkit-text-fill-color: transparent;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    font-size: 2.2rem;
 }
 
 .sub-header {
@@ -136,10 +107,9 @@ section {
     text-align: center;
 }
 
-/* --- MIS GRID (Horizontal, Different Widths) --- */
+/* --- MIS GRID --- */
 .mis-grid {
     display: grid;
-    /* Wide, Medium, Narrow columns */
     grid-template-columns: 1.3fr 1fr 0.7fr; 
     gap: 20px;
     align-items: stretch;
@@ -167,12 +137,12 @@ section {
     flex-grow: 1;
 }
 
-/* --- CONTACT SECTION (Horizontal Icons) --- */
+/* --- CONTACT ICONS --- */
 .contact-icons-row {
     display: flex;
     justify-content: center;
     gap: 50px;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
 }
 
 .contact-icons-row a {
@@ -186,13 +156,160 @@ section {
     transform: translateY(-8px);
 }
 
-/* --- Bio --- */
+/* --- REGISTRATION FORM STYLES --- */
+.registration-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid rgba(191, 149, 63, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+legend {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #ffd700;
+    padding: 0 15px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffd700;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 10px rgba(191, 149, 63, 0.2);
+}
+
+/* Radio & Checkbox Styling */
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.radio-group input, .checkbox-group input {
+    accent-color: #ffd700; /* Makes the dots/checks gold */
+    cursor: pointer;
+}
+
+.radio-group label, .checkbox-group label {
+    display: inline;
+    text-transform: none;
+    font-weight: 400;
+    cursor: pointer;
+    color: #fff;
+}
+
+.form-submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728);
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* --- FOOTER & BALANCED QUOTES --- */
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(191, 149, 63, 0.2);
+}
+
+.footer-quote {
+    flex: 1;
+    max-width: 350px;
+}
+
+.footer-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.footer-center {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.return-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.quote-author {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* --- Bio & Table Styles --- */
 .bio-img { width: 180px; border: 3px solid #d4af37; border-radius: 10px; }
 .bio-layout { display: flex; gap: 30px; align-items: center; }
-
-/* --- Table --- */
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 15px; border: 1px solid rgba(255, 255, 255, 0.1); }
 th { color: #d4af37; font-family: 'Playfair Display', serif; }
-
-footer { text-align: center; }
