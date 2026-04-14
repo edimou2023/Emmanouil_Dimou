@@ -12,13 +12,8 @@
 </head>
 <body>
 
-    <div class="sticky-top-bar">
+    <div class="sticky-top-bar" id="top">
         <h1 class="shiny-gold-text">EMMANOUIL DIMOU WEBSITE</h1>
-    </div>
-
-    <div class="fixed-quote-sidebar">
-        <p>"I've failed over and over and over again in my life. And that is why I succeed."</p>
-        <span class="quote-author">— EMMANOUIL DIMOU</span>
     </div>
 
     <div class="container">
@@ -79,7 +74,7 @@
                 <div class="mis-col col-wide">
                     <h3 id="h-blue" class="assignment-header">AI-Driven Personalization</h3>
                     <div class="assignment-p">
-                        Artificial Intelligence has revolutionized digital marketing through <strong>Predictive Modeling</strong>. By utilizing Machine Learning algorithms, businesses can now predict consumer behavior with 85% accuracy. This allows brands to pivot strategies in real-time, ensuring marketing spend is optimized while increasing customer lifetime value.
+                        Artificial Intelligence has revolutionized digital marketing through <strong>Predictive Modeling</strong>. By utilizing Machine Learning algorithms, businesses can now predict consumer behavior with 85% accuracy.
                     </div>
                 </div>
 
@@ -106,10 +101,83 @@
                 <a href="https://www.espn.com" target="_blank"><i class="fas fa-basketball-ball"></i></a>
                 <a href="mailto:dimou.emmanouil@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
+
+            <form class="registration-form">
+                <fieldset>
+                    <legend>Network Registration</legend>
+                    
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                            
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Interests / Hobbies</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="hobby1" name="hobby" value="basketball">
+                            <label for="hobby1">Basketball</label>
+                            
+                            <input type="checkbox" id="hobby2" name="hobby" value="tech">
+                            <label for="hobby2">Technology</label>
+                            
+                            <input type="checkbox" id="hobby3" name="hobby" value="travel">
+                            <label for="hobby3">Travel</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="How can I help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">Send Information</button>
+                </fieldset>
+            </form>
         </section>
 
-        <footer>
-            <a href="#top" class="shiny-gold-text">Return to Top</a>
+        <footer class="footer-container">
+            <div class="footer-quote">
+                <p>"I've failed over and over and over again in my life. And that is why I succeed."</p>
+                <span class="quote-author">— EMMANOUIL DIMOU</span>
+            </div>
+
+            <div class="footer-center">
+                <a href="#top" class="shiny-gold-text return-link">Return to Top</a>
+            </div>
+
+            <div class="footer-quote">
+                <p>"Life is a gift from God; success is the result of using that gift with purpose and relentless faith."</p>
+                <span class="quote-author">— EMMANOUIL DIMOU</span>
+            </div>
         </footer>
     </div>
 </body>
